@@ -23,7 +23,7 @@ client.onMessageArrived = function (message) {
 client.connect({
   onSuccess: function () {
     console.log("Conexão estabelecida com sucesso");
-    client.subscribe("esp.mackenzie/sensorcardiaco");
+    client.subscribe("arduino/1");
   },
   onFailure: function (errorMessage) {
     console.log("Falha na conexão: " + errorMessage.errorMessage);
