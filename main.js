@@ -1,22 +1,18 @@
 
- /// Configurações do broker MQTT
-var broker = "192.168.15.27";
+var broker = ""; //Colocar broker
 var port = 8884;
 var clientId = "web-client-" + parseInt(Math.random() * 100000, 10);
 var username = "";
 var password = "";
 
-// Cria um cliente MQTT
 var client = new Paho.MQTT.Client(broker, port, clientId);
 
-// Função de callback para quando a conexão é estabelecida
 client.onConnectionLost = function (responseObject) {
   if (responseObject.errorCode !== 0) {
     console.log("Conexão perdida: " + responseObject.errorMessage);
   }
 };
 
-// Função de callback para quando uma mensagem é recebida
 client.onMessageArrived = function (message) {
   updateDisplay(message.payloadString);
   console.log("Mensagem recebida: " + message.payloadString);
@@ -24,11 +20,9 @@ client.onMessageArrived = function (message) {
     "BPM: " + message.payloadString;
 };
 
-// Conecta-se ao broker MQTT
 client.connect({
   onSuccess: function () {
     console.log("Conexão estabelecida com sucesso");
-    // Subscreve ao tópico onde o BPM está sendo publicado
     client.subscribe("esp.mackenzie/sensorcardiaco");
   },
   onFailure: function (errorMessage) {
