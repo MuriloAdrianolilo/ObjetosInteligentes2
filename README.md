@@ -1,4 +1,4 @@
-Projeto de sensor de batimentos cardiacos - Universidade Presbiteriana Mackenzie - Analise e desenvolvimento de sistemas - Objetos inteligentes e conectados - Aplicando conhecimento aula 4
+# PROJETO DE SENSOR DE BATIMENTOS CARDIACOS / Universidade Presbiteriana Mackenzie / Analise e desenvolvimento de sistemas / Objetos inteligentes e conectados / Aplicando conhecimento aula 4
 
 Este projeto é um sensor de batimentos cardiacos feito para concluir a ultima aula da materia Objetos inteligentes e conectados da universidade presbiteriana mackenzie, usa IoT e conexão com protocolo MQTT.
 
