@@ -32,7 +32,7 @@ void setup() {
 void reconnect_mqtt() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
-    String clientId = "IoT_Sens0r_Cardiac0_Mackenzie";
+    String clientId = "IoT_Sensor_Cardiaco";
     clientId += String(random(0xffff), HEX);
     if (client.connect(clientId.c_str())) {
       Serial.println("Conectado"); 
